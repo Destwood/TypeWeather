@@ -1,0 +1,44 @@
+.wrapper {
+  background-color: #04263e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 30vw;
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 3rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  transition: height 0.5s;
+}
+
+/* search */
+.search {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.input {
+  font-size: 1.5rem;
+  max-width: 50%;
+}
+
+.searchLogo {
+  width: 2rem;
+}
+
+/* content */
+
+.contentContainer {
+  display: flex;
+  justify-content: center;
+}
