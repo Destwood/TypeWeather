@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import style from "./WeatherApi.module.css";
+import "./loader.css";
 
-import loc from "./assets/location.svg";
+import place from "./assets/place.svg";
 import search from "./assets/search.svg";
 import err from "./assets/404.png";
 import clear from "./assets/clear.png";
@@ -33,7 +34,7 @@ function WeatherApi() {
           setInfo(await response.json());
 
           setLoading(false);
-        }, 1000);
+        }, 2000);
         console.log(info);
       } catch (e) {
         console.log(e);
@@ -43,10 +44,6 @@ function WeatherApi() {
       setInfo();
     }
   };
-
-  useEffect(() => {
-    handleLocation();
-  }, []);
 
   // getting data
 
@@ -73,7 +70,7 @@ function WeatherApi() {
         {/* header */}
         <header>
           <div className={style.search}>
-            <img src={loc} alt="not found" className={style.searchLogo} />
+            <img src={place} alt="not found" className={style.searchLogo} />
 
             <input
               className={style.input}
@@ -96,20 +93,65 @@ function WeatherApi() {
         <div>
           <div className={style.contentContainer}>
             {loading ? (
-              <div>
-                <div>
-                  <div>loading</div>
-                  <div>loading</div>
-                  <div>loading</div>
-                  <div>loading</div>
-                  <div>loading</div>
-                  <div>loading</div>
-                </div>
+              <div class="loadingspinner">
+                <div id="square1"></div>
+                <div id="square2"></div>
+                <div id="square3"></div>
+                <div id="square4"></div>
+                <div id="square5"></div>
               </div>
             ) : info ? (
-              <div className="">got some data</div>
+              <>
+                <img className={style.img} src={imgChooser()} alt="" />
+                <div className={style.weather}>
+                  <div className={style.main}>
+                    <p className={style.temperature}>
+                      {Math.round(info.list[0].main.temp - 273.15)}
+                      <sup>°C</sup>
+                    </p>
+                    <p className={style.weatherName}>
+                      {info.list[0].weather[0].main}
+                    </p>
+                  </div>
+                  {/* datails */}
+                  <div className={style.details}>
+                    {/* Humidity */}
+                    <div className={style.detailsItem}>
+                      <img
+                        src={humidity}
+                        alt="not found"
+                        className={style.detailsIcon}
+                      />
+                      <div>
+                        <p className={style.detailsInfo}>
+                          {info.list[0].main.humidity}
+                        </p>
+                        <p>Humidity</p>
+                      </div>
+                    </div>
+                    {/* Wind */}
+                    <div className={style.detailsItem}>
+                      <img
+                        src={wind}
+                        alt="not found"
+                        className={style.detailsIcon}
+                      />
+                      <div>
+                        <p className={style.detailsInfo}>
+                          {info.list[0].wind.speed}
+                        </p>
+                        <p>Wind Speed</p>
+                      </div>
+                    </div>
+                  </div>
+                  {/* datails */}
+                </div>
+              </>
             ) : (
-              <div className={style.none}>dont have data</div>
+              <div className={style.none}>
+                <img className={style.img} src={err} alt="" />
+                <p>Can't get data</p>
+              </div>
             )}
           </div>
           {/* {!info && (

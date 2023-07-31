@@ -1,5 +1,6 @@
 .wrapper {
   background-color: #04263e;
+  color: #04263e;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,18 +28,50 @@
   margin-bottom: 1rem;
 }
 
-.input {
-  font-size: 1.5rem;
-  max-width: 50%;
-}
-
 .searchLogo {
   width: 2rem;
 }
 
+input {
+  color: #04263e;
+  font-size: 1.5rem;
+  max-width: 50%;
+}
+
+input::placeholder {
+  color: #04263e78;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
 /* content */
 
 .contentContainer {
+  text-align: center;
+}
+
+.img {
+  max-width: 60%;
+  margin-bottom: 2rem;
+}
+
+.temperature {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.weatherName {
+  font-size: 2rem;
+}
+
+/* details */
+
+.details {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+.detailsIcon {
+  width: 5rem;
 }
