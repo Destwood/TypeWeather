@@ -13,7 +13,7 @@ import snow from "./assets/snow.png";
 import humidity from "./assets/humidity.svg";
 import wind from "./assets/wind.svg";
 // <img src={err} alt="" />
-const APIKey = "7d5bc3825570c37fac6bfa984c844535";
+const APIKey = "enter api key";
 
 function WeatherApi() {
   const [location, setLocation] = useState();
