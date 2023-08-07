@@ -154,48 +154,6 @@ function WeatherApi() {
               </div>
             )}
           </div>
-          {/* {!info && (
-            <img className={style.weatherImg} src={err} alt="not found" />
-          )}
-          {info && (
-            <div className={style.weatherContent}>
-              <div className={style.temperatureContainer}>
-                <img
-                  className={style.weatherImg}
-                  src={imgChooser()}
-                  alt="not found"
-                />
-                <p className={style.mainTemp}>
-                  {Math.round(info.list[0].main.temp - 273.15)}
-                  <sup>°C</sup>
-                </p>
-              </div>
-              <div className={style.weatherInfoContainer}>
-                <div className={style.weatheInfoItem}>
-                  <img
-                    src={humidity}
-                    alt="not found"
-                    className={style.weatherInfoIcon}
-                  />
-                  <div>
-                    <p className={style.info}>{info.list[0].main.humidity}</p>
-                    <p>Humidity</p>
-                  </div>
-                </div>
-                <div className={style.weatheInfoItem}>
-                  <img
-                    src={wind}
-                    alt="not found"
-                    className={style.weatherInfoIcon}
-                  />
-                  <div>
-                    <p className={style.info}>{info.list[0].wind.speed}</p>
-                    <p>Wind Speed</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )} */}
         </div>
       </div>
     </div>
