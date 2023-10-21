@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import WeatherApi from "./components/WeatherApi/WeatherApi.jsx";
+import WeatherApi from "./components/Home/Home";
 
 function App() {
   return (
