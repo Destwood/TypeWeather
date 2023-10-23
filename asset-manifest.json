@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TypeWeather/static/css/main.b4041267.css",
-    "main.js": "/TypeWeather/static/js/main.e21187b2.js",
+    "main.css": "/TypeWeather/static/css/main.0d933ed7.css",
+    "main.js": "/TypeWeather/static/js/main.56205911.js",
     "static/media/SnowDayBg.png": "/TypeWeather/static/media/SnowDayBg.6447807f1323b3357955.png",
     "static/media/FewCloudsNightBg.png": "/TypeWeather/static/media/FewCloudsNightBg.2a54bdd7292c2eaa8210.png",
     "static/media/ClearNightBg.png": "/TypeWeather/static/media/ClearNightBg.2c6436386dfa490d18b0.png",
@@ -29,11 +29,11 @@
     "static/media/humidity.svg": "/TypeWeather/static/media/humidity.356ef786486676e1fea5b124accd766f.svg",
     "static/media/logo.svg": "/TypeWeather/static/media/logo.029ecc62d6cac6c1de67a972ef00dca5.svg",
     "index.html": "/TypeWeather/index.html",
-    "main.b4041267.css.map": "/TypeWeather/static/css/main.b4041267.css.map",
-    "main.e21187b2.js.map": "/TypeWeather/static/js/main.e21187b2.js.map"
+    "main.0d933ed7.css.map": "/TypeWeather/static/css/main.0d933ed7.css.map",
+    "main.56205911.js.map": "/TypeWeather/static/js/main.56205911.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4041267.css",
-    "static/js/main.e21187b2.js"
+    "static/css/main.0d933ed7.css",
+    "static/js/main.56205911.js"
   ]
 }
